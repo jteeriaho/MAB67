@@ -67,9 +67,9 @@
 # 
 # $\begin{matrix}
 # x_n&\text{WolframAlpha komento}&x_{n+1}\\
-# 2 &\text{(x-e^x-x-3)/(e^x-1) where x=2}  & 1.61 \\
-# 1.63 &\text{(x-e^x-x-3)/(e^x-1) where x=1.63}  & 1.51 \\
-# 1.51 &\text{(x-e^x-x-3)/(e^x-1) where x=1.51}  & 1.51
+# 2 &\text{x-(e^x-x-3)/(e^x-1) where x=2}  & 1.61 \\
+# 1.63 &\text{x-(e^x-x-3)/(e^x-1) where x=1.63}  & 1.51 \\
+# 1.51 &\text{x-(e^x-x-3)/(e^x-1) where x=1.51}  & 1.51
 # \end{matrix}$
 # 
 # 
@@ -77,9 +77,9 @@
 # 
 # $\begin{matrix}
 # x_n&\text{WolframAlpha komento}&x_{n+1}\\
-# -2 &\text{(x-e^x-x-3)/(e^x-1) where x=-2}  & -3 \\
-# -3 &\text{(x-e^x-x-3)/(e^x-1) where x=-3}  & -2.95 \\
-# -2.95 &\text{(x-e^x-x-3)/(e^x-1) where x=-2.95}  & -2.95
+# -2 &\text{x-(e^x-x-3)/(e^x-1) where x=-2}  & -3 \\
+# -3 &\text{x-(e^x-x-3)/(e^x-1) where x=-3}  & -2.95 \\
+# -2.95 &\text{x-(e^x-x-3)/(e^x-1) where x=-2.95}  & -2.95
 # \end{matrix}$
 # ```
 # ````
