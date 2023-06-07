@@ -403,11 +403,13 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#tasaeralainan-lainalaskelman-tekeminen-taulukkolaskentaohjelmalla">
      Tasaerälainan lainalaskelman tekeminen taulukkolaskentaohjelmalla
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era">
-     Tasaerälaina, johon sisältyy “suurempi viimeinen erä”
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era">
+       Tasaerälaina, johon sisältyy “suurempi viimeinen erä”
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tasaeralainan-kk-maksun-laskukaavan-perustelu">
@@ -476,11 +478,13 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#tasaeralainan-lainalaskelman-tekeminen-taulukkolaskentaohjelmalla">
      Tasaerälainan lainalaskelman tekeminen taulukkolaskentaohjelmalla
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era">
-     Tasaerälaina, johon sisältyy “suurempi viimeinen erä”
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era">
+       Tasaerälaina, johon sisältyy “suurempi viimeinen erä”
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tasaeralainan-kk-maksun-laskukaavan-perustelu">
@@ -575,15 +579,17 @@ n = lyhennysten lukumäärä</p>
 soluun F2 kaava =B2-C2, sekä soluun B2 kaava =F2, joka kopioi lainapääoman seuraavalle kuukaudelle.</p></li>
 <li><p>Kopioi kaikki kaavat alas vetämällä kaavasolun oikeasta alakulmasta</p></li>
 </ol>
+<section id="tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era">
+<h4>Tasaerälaina, johon sisältyy “suurempi viimeinen erä”<a class="headerlink" href="#tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era" title="Permalink to this headline">#</a></h4>
+<p>Esim. 5000 euron taserälaina, jonka korkojakso on 1 vuosi, laina-aika 5 vuotta ja korko 10%. Viimeisen maksun yhteydessä maksetaan ylimääräinen 2000 euron isompi erä.  Mikä on tasaerän suuruus?</p>
+<p><strong>Periaate:</strong> Merkitään tasaerää p:llä. Tulevien maksujen nykyarvojen summan on oltava sama kuin lainattu summa.</p>
+<p>Ts. <span class="math notranslate nohighlight">\(5000 = \frac{p}{1.01} + \frac{p}{1.01^2} + ... + \frac{p}{1.01^5} + \frac{2000}{1.01^5}\)</span>, josta p voidaan ratkaista laskimen yhtälönratkaisimella.</p>
+<p>Tämä menettely voidaan yleistää kaavaksi, jota käyttäen tasaerä p voidaan ratkaista peruslaskimilla.</p>
 <div class="tip admonition">
 <p class="admonition-title"><strong>Tasaerälaina, jossa viimeiseen erään on lisätty lainan jäännösarvo</strong></p>
 <p><span class="math notranslate nohighlight">\(p=\frac{k\hspace{1mm}i-K\hspace{1mm}i (1+i)^{-n}}{1-(1+i)^{-n}}\)</span></p>
 <p>k = lainamäärä, i = korkojakson korkoprosentti, n = erien määrä, K = jäännösarvo</p>
-<p>Huom! Kaavaa vastaava Excel funktio on MAKSU (engl. Excelissä PMT)</p>
 </div>
-</section>
-<section id="tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era">
-<h3>Tasaerälaina, johon sisältyy “suurempi viimeinen erä”<a class="headerlink" href="#tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era" title="Permalink to this headline">#</a></h3>
 <p><strong>Moni autoliike mainostaa vaihtoautoja seuraavasti:  Auton hinta on 6000 euroa, rahoitus 36 kk maksuajalla ja 0.5% kk-korolla antaa kuukausieräksi 131.69. Viimeinen maksuerä on 2000 euroa suurempi.</strong></p>
 <p>**Tällä tavalla saadaan kuukausierää pienennettyä. Lainaa ei siisä makset loppuun saakka, vaan asiakas jää 2000 euroa velkaa sopimuksen loppuessa, mikä usein johtaa siihen, että asiakas jatkaa asiakkuuttaan ja tekee sopimuksen uudesta vaihtoautosta.</p>
 <div class="dropdown admonition">
@@ -594,8 +600,9 @@ soluun F2 kaava =B2-C2, sekä soluun B2 kaava =F2, joka kopioi lainapääoman se
 n = lyhennysten lukumäärä (laina-aika) ja K on viimeiseen erään lisätty ns. jäännösarvo</p>
 <p>Sijoitusten jälkeen saadaan tasaeräksi
 <span class="math notranslate nohighlight">\(p=\frac{6000\hspace{1mm}0.05-2000\hspace{1mm}0.005\cdot 1.005^{-36}}{1-1.005^{-36}} = 131.69 \)</span></p>
-<p>Excel-ratkaisu: <span class="math notranslate nohighlight">\(\color{blue}{\text{=MAKSU(0,5%;36;5000,-2000)}}\)</span></p>
+<p>Calc-ohjelmalla: <span class="math notranslate nohighlight">\(\color{blue}{\text{=PMT(0,5%;36;5000,-2000)}}\)</span></p>
 </div>
+</section>
 </section>
 <section id="tasaeralainan-kk-maksun-laskukaavan-perustelu">
 <h3>Tasaerälainan kk-maksun laskukaavan perustelu<a class="headerlink" href="#tasaeralainan-kk-maksun-laskukaavan-perustelu" title="Permalink to this headline">#</a></h3>
