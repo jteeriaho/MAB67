@@ -1,0 +1,675 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Tehtäviä osaan MAB7 &#8212; MAB taloausmatematiikkaa</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Pitkäaikaiset lainat" href="pitkaaikaiset_lainat.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">MAB taloausmatematiikkaa</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Sisällysluettelo
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MAB6 kauppamatikan perusteita
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="prosenttilaskut.html">
+   Prosenttilaskut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="verotus.html">
+   Verotus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="indeksit.html">
+   Indeksit ja rahan arvo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="valuutat.html">
+   Valuutat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="korot.html">
+   Korko
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tehtavia_MAB6.html">
+   Tehtäviä osaan MAB6
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MAB7 kauppamatikan jatko-osa
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lukujonot.html">
+   Lukujonot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="koronkorkolaskut.html">
+   Koronkorkolaskut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pitkaaikaiset_lainat.html">
+   Pitkäaikaiset lainat
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tehtäviä osaan MAB7
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/jteeriaho/MAB67.git/main?urlpath=tree/tehtavia_MAB7.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/jteeriaho/MAB67.git"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/jteeriaho/MAB67.git/issues/new?title=Issue%20on%20page%20%2Ftehtavia_MAB7.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/tehtavia_MAB7.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lukujonot">
+   Lukujonot
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#koronkorkolaskut">
+     Koronkorkolaskut
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pitkaaikaiset-lainat">
+   Pitkäaikaiset lainat
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Tehtäviä osaan MAB7</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lukujonot">
+   Lukujonot
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#koronkorkolaskut">
+     Koronkorkolaskut
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pitkaaikaiset-lainat">
+   Pitkäaikaiset lainat
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="tehtavia-osaan-mab7">
+<h1>Tehtäviä osaan MAB7<a class="headerlink" href="#tehtavia-osaan-mab7" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p><em>Laske ensin kukin tehtävä itse, katso vasta sen jälkeen vastaus ja malliratkaisu</em></p>
+</div></blockquote>
+<section id="lukujonot">
+<h2>Lukujonot<a class="headerlink" href="#lukujonot" title="Permalink to this headline">#</a></h2>
+<div class="dropdown tip admonition">
+<p class="admonition-title">1.1 Lukujono (11,18,25,…,564) on aritmeetinen. Montako termiä siinä on? Mikä on termien summa?    </p>
+<p>Vastaus: 80 termiä, summa on 23000</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>Termien määrä n ratkaistaan kaavasta <span class="math notranslate nohighlight">\(a_n = a_1 + (n-1)d\)</span> sijoittamalla <span class="math notranslate nohighlight">\(a_1=11, a_n=564, d = 7\)</span><br />
+Yhtälöstä 564=11+(n-1)*7  saadaan n-1 = (564-11)/2 , josta n = 80<br />
+Summa lasketaan kaavalla <span class="math notranslate nohighlight">\(S=n*(a_1+a_n)/2 = 80*(11+564)/2 = 23000\)</span></p>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">1.2 Maijalla on valmistuessaan 12000 euroa opintolainaa, joka hänen tulee maksaa tasalyhennysperiaatteella 6 vuoden aikana puolivuosittaisilla maksuilla. Puolen vuoden korko on 2.0%. Kuinka monta euroa Maija maksaa korkoja yhteensä? </p>
+<p>Vastaus: 11.7% pienempi</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>Lainan lyhennys on 12000/12 = 1000 euroa puolivuosittain.<br />
+Korot muodostavat aritmeettisen sarjan (2%*12000 = 240, 2%*11000 = 220, …., 2%*1000 = 20), jonka summa<br />
+<span class="math notranslate nohighlight">\(S = n\frac{a_1+a_n}{2}= 12\frac {240+20}{2} = 1560\)</span> euroa</p>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">1.3 Aritmeettisen jonon 4. termi on 20 ja 10. termi on 38. Määritä jonon 1. termi <span class="math notranslate nohighlight">\(a_1\)</span> ja perättäisten termien erotus d. </p>
+<p>Vastaus: <span class="math notranslate nohighlight">\(d = 3\)</span> ja <span class="math notranslate nohighlight">\(a1= 11\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<ol class="simple">
+<li><p>ja 10. termin väli on 6 d. Ts. 38-20 = 6 d  =&gt;  18 = 6 d =&gt; d = 18/6 = 3</p></li>
+<li><p>ja 4. termin väli 20 - a1 = 3d = 9 =&gt;  20 - a1 = 9 =&gt;  20-9 = a1 =&gt;  a1 = 11.</p></li>
+</ol>
+<p>Tulokset saisi ratkaisemalla yhtälöpari 20 = a1 + (4-1)d , 38 = a1 + (10-1)d</p>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">1.4  Isä lupasi lahjoittaa lapselleen 1v päivänä 0.1 euroa, 2v-päivänä 0.2 euroa, 3v-päivänä 0.4 euroa jatkaen tuplaamista aina siihen saakka kun lapsi täyttää 18 vuotta. Kuinka suuri on kaikkien lahjoitusten yhteismäärä?  </p>
+<p>Vastaus: <span class="math notranslate nohighlight">\(26214 \)</span> euroa</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>0.1, 0.2, 0.4, ….  on geometrinen jono, jonka 1. termi <span class="math notranslate nohighlight">\(a_1 = 0.1\)</span> ja suhdeluku <span class="math notranslate nohighlight">\(q = 2\)</span></p>
+<p>Summa <span class="math notranslate nohighlight">\(S =a_1\frac{1-q^n}{1-q} =  0.1\frac{1-2^18}{1-2} = 26214 \)</span> euroa</p>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">1.5  Mikä on jonon $10\cdot 1.2,10\cdot 1.2^2, 10\cdot 1.2^3, …. 20. termin likiarvo?   </p>
+<p>Vastaus: 383.4</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<ol class="simple">
+<li><p>termi <span class="math notranslate nohighlight">\(a_1 = 10*1.2 = 12\)</span> ja suhdeluku <span class="math notranslate nohighlight">\(q = 1.2\)</span><br />
+Jonon n:s termin saadaan kaavalla <span class="math notranslate nohighlight">\(a_n = a_1*q^{n-1}\)</span>, joten kun n = 20, saadaan <span class="math notranslate nohighlight">\(12*1.2^{19}=383.4\)</span></p></li>
+</ol>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">1.6  2000 euron talletukselle maksetaan korkoa kerran vuodessa. Korko lisätään vuosittain pääomaan. Viiden vuoden kuluttua tilillä on 3221 euroa. Mikä on korkoprosentti?   </p>
+<p>Vastaus: 10%</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>Merkitään korkokerrointa x:llä  (korkokerroin on 1 + i, missä i on korkoprosentin desimaaliesitys).<br />
+Tilin saldo 5 vuoden kuluttua on <span class="math notranslate nohighlight">\(2000 x^5\)</span>, joka on siis 3221.<br />
+Ratkaistaan yhtälö <span class="math notranslate nohighlight">\(2000 x^5 = 3221\)</span> joko laskimen solve:lla tai manuaalisesti:</p>
+<p><span class="math notranslate nohighlight">\(x^5 = \frac{3221}{2000} = 1.6105\)</span>     Otetaan 5:s juuri molemmista puolista</p>
+<p>x = <span class="math notranslate nohighlight">\(\sqrt[5]{1.6105} = 1.10\)</span> , joten i = 1.10 - 1 = 0.10 = 10%</p>
+<p>Vastaus: korko on 10%</p>
+<p><em>Huom! Tämänkin tehtävän ratkaisun välivaiheineen saisi kopioimalla kysymystekstin tekoälyyn, jollainen löytyy esim. Edge-selaimesta.</em></p>
+</div>
+</div>
+<section id="koronkorkolaskut">
+<h3>Koronkorkolaskut<a class="headerlink" href="#koronkorkolaskut" title="Permalink to this headline">#</a></h3>
+<div class="dropdown tip admonition">
+<p class="admonition-title">2.1 20000 euron,4 vuoden määräaikaistalletuksen nimelliskorko on 2.00 %. Korko maksetaan puolivuosittain tilille? Mikä on tilin loppusaldo? Mikä on efektiivinen korko?</p>
+<p>Vastaus: 21657 € , <span class="math notranslate nohighlight">\(i_{eff}=2.01\%\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>Koska korkojakso &lt; vuosi, käytetään kaavaa <span class="math notranslate nohighlight">\(K = k(1+\frac{i}{n})^{n\cdot t} =20000(1+\frac{0.02}{2})^{2\cdot 4} \)</span> =21657<br />
+Efektiivinen korko <span class="math notranslate nohighlight">\(i_{eff}=(1+\frac{i}{2})^2\)</span> = 0.0201 = 2.01%</p>
+<p><em>Calc-ohjelmalla  =TULEVA.ARVO(2%/2;2</em>4;;20000)   ja   =KORKO.EFEKT(2%;2)*</p>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">2.2 Kiinteistön arvo v.2020 oli 120000 €. Oletetaan, että arvo nousee tasaisesti 2% vuodessa. Mikä arvo on v.2030?. Mikä arvo oli v.2008? Milloin arvo ylittää 150000 € rajan?</p>
+<p>Vastaus: 146279 € , 94619 € , v. 2031 aikana</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>a) v. 2030 arvo <span class="math notranslate nohighlight">\(K = k(1+i)^{t} =120000\cdot (1.02)^{10}  =146279\)</span><br />
+b) v. 2008 arvo <span class="math notranslate nohighlight">\(K = k(1+i)^{t} =120000\cdot (1.02)^{-12} \)</span><strong>= 120000/1.02^12   =94619</strong><br />
+c) kaava <strong>t = log(K/k)/log(1+i)</strong> antaa <strong>log(150000/120000)/log(1.02) = 13.3</strong>, josta 2020 + 11.33 = 2031</p>
+<p><em>Calc-ohjelmalla  =TULEVA.ARVO(2%;10;;120000), =NYKYARVO(2%;12;;120000) ja NJAKSO(2%;;-120000;150000)</em></p>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">2.3 Kultaharkosta maksettiin 600 euroa. 12 vuotta myöhemmin se myytiin 3200 eurolla? a) Mikä oli vuosittainen keskimääräinen tuottoprosentti? a) Mikä oli reaalinen tuottoprosentti, jos inflaatio oli keskimäärin 3% vuodessa? Mikä oli reaalinen tuottoprosentti, jos rahan arvo aleni 4% vuodessa ja myyntivoitosta maksettiin 30% vero ? </p>
+<p>Vastaus: a) 15%  b)11.6%  c) 5.6%</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>a) Korkokannan laskukaava <span class="math notranslate nohighlight">\(i = \sqrt[t]{K/k}-1\)</span> antaa <span class="math notranslate nohighlight">\(i = \sqrt[12]{3200/600}-1 = 0.1497 = 15.0\%\)</span></p>
+<p>b) Myyntihinta pitää diskontata ostohetkeen:  3200/1.03^12 = 2244 €.
+Inflaatiokorjattu tuotto on <span class="math notranslate nohighlight">\(\sqrt[12]{2244/600}-1 = 0.116 = 11.6\%\)</span></p>
+<p>c)  Myyntivoitosta 3200- 600 eli 2600 maksetaan veroa 30% eli 780 euroa, jonka jälkeen myyntitulo on 2420 euroa.<br />
+Korjattuna ostovuoden hintatasoon se on 2420*0.96^12 = 1151.7</p>
+<p>Näin laskien reaalinen tuottokorko on  <span class="math notranslate nohighlight">\(\sqrt[12]{1151.7/600}-1 = 0.0556 = 5.6\%\)</span></p>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">2.4 Poksi asuntovaunu maksaa uutena 15000 euroa. Sen arvo alenee 4.5 % vuodessa? Minkä arvoinen se on 10 v kuluttua?</p>
+<p>Vastaus: 9465 €</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p><span class="math notranslate nohighlight">\(K = k(1+i)^{t} =15000\cdot (1-0.045)^{10} = 15000\cdot (0.955)^{10} = 9465\)</span></p>
+<p><em>Calc ohjelmalla: =TULEVA.ARVO(-4,5/100;10;;15000)</em></p>
+</div>
+</div>
+</section>
+</section>
+<section id="pitkaaikaiset-lainat">
+<h2>Pitkäaikaiset lainat<a class="headerlink" href="#pitkaaikaiset-lainat" title="Permalink to this headline">#</a></h2>
+<p>Ao. tehtävissä käytetään oppimateriaalissa esitettyjä kaavoja, joita löytyy myös kaavakirjoista. Laskut voidaan tehdä myös Calc -taulukkolaskentaohjelmalla</p>
+<div class="dropdown tip admonition">
+<p class="admonition-title">3.1 Opiskelija ostaa pesukoneen luotolla, jonka maksuaika on 18 kk. Luottosumma on 400 Euroa, korko 6% vuodessa eli 0.5% kk:ssa. Mikä on kuukausierän suuruus?</p>
+<p>Vastaus: 23.29 €</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>Laskukaavalla maksuerän suuruus <span class="math notranslate nohighlight">\(p = \frac {k\cdot i}{1-(1+i)^{-n}}=\frac {400\cdot 0.005}{1-(1.005^{-18}} = 23.29\)</span></p>
+<p>Calc ohjelmalla:   = PMT(0,5%;18;400) antaa 23.29</p>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">3.2 S-pankin VISA- kortin (nimellis) korko on 15%. Mikä on efektiivinen korko, kun korkojakso on kuukausi?</p>
+<p>Vastaus: 16.1%</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>Todellinen korko <span class="math notranslate nohighlight">\(i_{eff}=(1 + \frac{i}{12})^{12} - 1 = (1+0.15/12)^{12} -1 = 0.1608 = 16.08\% \)</span></p>
+<p>Calc ohjelmalla =KORKO.EFEKT(15%;12)  argumentit: nimelliskorko, ja erien määrä vuodessa</p>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">3.3 Sijoitusrahastoon tallennetaan 8 vuoden ajan 100 euroa/kk. Nimelliskorko (per vuosi) = <span class="math notranslate nohighlight">\(2.4%\)</span> eli kk-korko on <span class="math notranslate nohighlight">\(0.2%\)</span>. Mikä on tilin loppusaldo? </p>
+<p>Vastaus: 10593 euroa</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>Sijoitetaan kaavaan S = <span class="math notranslate nohighlight">\(p\cdot (1+i)\frac{(1+i)^n-1}{i}\)</span> p = 100, i = 0.002, ja n = 96. Saadaan</p>
+<p><span class="math notranslate nohighlight">\(S = 100\cdot 1.002 \frac{1.002^{96}-1}{0.002} = 10593\)</span></p>
+<p>Calc ohjelmalla:  = TULEVA.ARVO(0,2%; 96; 100;;1)</p>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">3.4 Tee taulukkolaskentaohjelmalla lainalaskelma 3000 euron luotolle, joka maksetaan takaisin 6 kuukauden aikana <strong>tasalyhennysperiaatteella</strong>. Lainan nimelliskorko on 9% eli 0.75% kuukaudessa.    </p>
+<p>Vastaus: Tee tehtävä Calc- ohjelmalla. Kuvakaappaus taulukosta aukeaa alapuolelta</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>Lasketaan aluksi tasalyhennys jakolaskulla 3000/6 = 500</p>
+<p><img alt="r34" src="_images/r34.png" /></p>
+</div>
+</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title">3.4 Tee taulukkolaskentaohjelmalla lainalaskelma 3000 euron *<em>tasaerälainalle</em>, joka maksetaan takaisin 6 kuukauden aikana. Lainan nimelliskorko on 9% eli 0.75% kuukaudessa.</p>
+<p>Vastaus: Tee tehtävä Calc- ohjelmalla. Kuvakaappaus taulukosta aukeaa alapuolelta</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu:</p>
+<p>Lasketaan aluksi tasaerä esim. Calc- ohjelmalla: =PMT(0,75%; 6; 3000), joka antaa 513.207</p>
+<p><img alt="r34" src="_images/r35.png" /></p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="pitkaaikaiset_lainat.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Pitkäaikaiset lainat</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Jouko Teeriaho<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

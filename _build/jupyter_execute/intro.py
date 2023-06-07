@@ -3,10 +3,11 @@
 
 # # Sisällysluettelo
 # 
-# **Elinkaarilaskentaa:** Koronkorkolaskennan perusteita. Elinkaarilaskennan menetelmiä: *Nykyarvomenetelmä, annuiteettimenetelmä, sisäisen koron menetelmä*  
+# **Kaupallisen matematiikan perusteita (MAB6):**     
+# Prosenttilaskenta,verotus, indeksit, rahan arvo, valuutat, korot, tehtäviä   
 # 
-# **Tilasto-oppia:** Deskriptiivistä tilasto-oppia. Jatkuvat tilastojakaumat. Tilastollinen virheen arviointi. Regressioanalyysi 
+# **Kaupallisen matematiikan jatko-osa (MAB7)**         
+# Aritmeettinen ja geometrinen jono. Koronkorkolaskut. Pitkät lainat, tehtäviä 
 # 
-# **Differentiaalilaskentaa:** Raja-arvo pisteessä. Derivaatan määritelmä ja laskeminen raja-arvona. Perusfunktioiden derivaatat. Tulon ja osamäärän derivaatta. Yhdistetyn funktion derivaatta. Korkeammat derivaatat. Osittaisderivaatat. Newtonin menetelmä. Virheen arviointia derivaatoilla. Funktion ääriarvot. 
 # 
-# **Integraalilaskentaa:** Integraalifunktio. Integroimiskaavoja. Määrätty integraali. Määrätyn integraalin sovelluksia.
+# 
