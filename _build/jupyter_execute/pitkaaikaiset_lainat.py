@@ -33,7 +33,7 @@
 
 # Nykyisin yleisin lainamuoto asunto- ja kulutusluotoissa on **tasaerälaina**, jossa laina maksetaan takaisin koko laina-ajan samansuuruisina pysyvinä suorituksina, jotka sisältävät sekä lyhennyksen että koron.    
 # 
-# Alla on kaava maksuerän suuruuden laskemiseen.  Kaava voidaan johtaa käyttämällä geometrisen sarjan summan kaavaa, joka löytyy kaavakirjoista. **Kaavan perustelu löytyy tämän sivun lopusta**
+# Alla on kaava maksuerän suuruuden laskemiseen.  Kaava voidaan johtaa käyttämällä geometrisen sarjan summan kaavaa, joka löytyy kaavakirjoista. **Kaavan perustelu löytyy tämän sivun lopussa olevasta liitteestä**      
 
 # ```{admonition} **Tasaerälainan maksuerän laskukaava**
 # :class: tip  
@@ -42,7 +42,7 @@
 # 
 # k = lainamäärä, i = korkojakson korkoprosentti, n = erien määrä    
 # 
-# Huom! Kaavaa vastaava Excel funktio on MAKSU (engl. Excelissä PMT)
+# Huom! Calc ohjelmassa maksuerä saadaan funktiolla PMT(korko,erien määrä, lainamäärä)
 # ```
 
 # ###  Esimerkki kuukausierän laskemisesta kaavalla ja taulukkolaskentaohjelmalla
@@ -61,7 +61,7 @@
 # 
 # Sijoitusten jälkeen saadaan tasaeräksi $p= \frac{800\hspace{1mm}\cdot \hspace{1mm}0.005}{1-1.005^{-18}} = 46.59 $     
 # 
-# Excel-ratkaisu: $\color{blue}{\text{=MAKSU(0,5%;18;800)}}$  (englanninkielisessä versiossa PMT)
+# Calc ohjelmalla: $\color{blue}{\text{=PMT(0,5%;18;800)}}$   
 # 
 # ```
 
@@ -121,28 +121,6 @@
 # 
 # ```
 
-# ### Tasaerälainan kk-maksun laskukaavan perustelu
-
-# (Tämän voi ohittaa, ei tarvita laskuissa)
-# Esim. Laskettava **1000 euron lainan kk-erä, kun kk-korko on 1.0% ja erien määrä on 10**.     
-# 
-# Periaate: Tulevat maksuerät diskontataan lainan antohetkeen, summaksi pitää tulla lainasumma.      
-# 
-# Merkitään vakiona pysyvää maksuerää p:llä.  1. erä maksetaan kuukauden kuluttua ja sillä on 1% korko, joten sen arvo lainan antohetkellä on $\frac {p}{1.01}$,  seuraava erä maksetaan 2 kk kuluttua. Sen arvo lainan antohetkellä on $\frac {p}{1.01^2}$ j.n.e.
-# Erien nykyarvojen summan pitää olla sama kuin lainattu summa, josta saadaan yhtälö      
-# 
-# $1000 = \frac {p}{1.01} + \frac {p}{1.01^2} + .... + \frac {p}{1.01^{10}}$ => $1000 = p(\frac {1}{1.01} + \frac {1}{1.01^2} + .... + \frac {1}{1.01^{10}})$ => $p = \frac{1000}{\frac {1}{1.01} + \frac {1}{1.01^2} + .... + \frac {1}{1.01^{10}}}$  
-# 
-# Nimittäjä on 10 termin geometrinen jono, jonka 1. termi a ja suhdeluku q ovat $\frac{1}{1.01}$. Geometrisen jonon summakaavalla S = $a \frac {1-q^n}{1-q}$ nimittäjän arvoksi tulee $\frac{1}{1.01}*\frac {1-\frac{1}{1.01}^{10}}{1-\frac{1}{1.01}} = 9.4713$.  Siten kuukausierä $p = \frac {1000}{9.4713} = 105.58$                
-# 
-# Aiemmin esitetty maksuerän kaava $p = \frac {k\cdot i}{1-(1+i)^{-n}}$ lyhentää laskun muotoon $p = \frac {1000\cdot 0.01}{1-(1+0.01)^{-10}} = 105.58$      
-# 
-# Laskimeen tämä syötetään muodossa 1000*0.01/(1-1.01^-10). Maksuerän laskussa tuskin koskaan käytetään tätä kaavaa, koska kaavan sisältämä valmisfunktio on uusissa laskimissa nimellä PMT, kuten myös taulukkolaskentaohjelmissa.
-# 
-# Excelissä **= PMT(0.01;10;1000)**  antaa 105.58    (argumentit järjestyksessä: korko, erien määrä ja lainamäärä)
-# 
-# 
-
 # ## Efektiivinen korko
 
 # > Lainakorko ilmoitetaan useimmiten **NIMELLISKORKONA** (symboli i), esim. 6% vuodessa**
@@ -179,7 +157,7 @@
 # 
 # ```
 
-# ## Tasaeräsäästäminen
+# ## Rahastosäästäminen tasaerinä
 
 # Geometrista sarjaa käytetään myös laskettaessa tasaerinä tapahtuvan säästämisen loppusaldon laskemisessa. 
 # Olkoon p vakiona pysyvä kk-talletus, i = kuukausikorko r = 1 + i on vastaava korkotekijä ja n = jaksojen määrä.        
@@ -202,3 +180,16 @@
 # Vastaus: 3240 euroa.
 # 
 # ```
+
+# ### Liite: Tasaerän laskukaavan johtaminen geometrisen sarjan summan kaavalla
+
+# Esim. **Olkoon lainasumma k, erien määrä n, korkoprosentti i, ja korkokerroin 1 + i = r, p = laskettava maksuerä**.      
+# 
+# Periaate: Maksujen arvojen summa lainan ottohetkeen muunnettuna = lainan määrä.     
+#    
+# $k = \frac {p}{r} + \frac {p}{r^2} + .... + \frac {p}{r^n}$ => $k = p(\frac {1}{r} + \frac {1}{r^2} + .... + \frac {1}{r^{n}})$ => $p = \frac{k}{\frac {1}{r} + \frac {1}{r^2} + .... + \frac {1}{r^{n}}}$  
+# 
+# Nimittäjä on geometrinen jono, jossa on n termiä, 1. termi a ja suhdeluku q ovat $\frac{1}{r}$.      
+# Geometrisen jonon summakaavalla $S = a \frac {1-q^n}{1-q}$ nimittäjä voidaan kirjoittaa muodossa $\frac{1}{r} \frac {1-\frac{1}{r}^{n}}{1-\frac{1}{r}} = \frac {1-\frac{1}{r}^{n}}{r-1}= \frac {1-r^{-n}}{i}$.       
+# 
+# Siten  $p = \frac {k}{\frac {1-r^{-n}}{i}} =\frac {k\cdot i}{1-r^{-n}} = \frac {k\cdot i}{1-(1+i)^{-n}} $                
