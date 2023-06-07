@@ -411,11 +411,6 @@ title="Print to PDF"
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tasaeralainan-kk-maksun-laskukaavan-perustelu">
-     Tasaerälainan kk-maksun laskukaavan perustelu
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -431,9 +426,16 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tasaerasaastaminen">
-   Tasaeräsäästäminen
+  <a class="reference internal nav-link" href="#rahastosaastaminen-tasaerina">
+   Rahastosäästäminen tasaerinä
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#liite-tasaeran-laskukaavan-johtaminen-geometrisen-sarjan-summan-kaavalla">
+     Liite: Tasaerän laskukaavan johtaminen geometrisen sarjan summan kaavalla
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -486,11 +488,6 @@ title="Print to PDF"
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tasaeralainan-kk-maksun-laskukaavan-perustelu">
-     Tasaerälainan kk-maksun laskukaavan perustelu
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -506,9 +503,16 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tasaerasaastaminen">
-   Tasaeräsäästäminen
+  <a class="reference internal nav-link" href="#rahastosaastaminen-tasaerina">
+   Rahastosäästäminen tasaerinä
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#liite-tasaeran-laskukaavan-johtaminen-geometrisen-sarjan-summan-kaavalla">
+     Liite: Tasaerän laskukaavan johtaminen geometrisen sarjan summan kaavalla
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -547,12 +551,12 @@ soluun F2 kaava =B2-C2, sekä soluun B2 kaava =F2, joka kopioi lainapääoman se
 <section id="tasaeralainan-kk-maksun-laskukaava">
 <h3>Tasaerälainan kk-maksun laskukaava<a class="headerlink" href="#tasaeralainan-kk-maksun-laskukaava" title="Permalink to this headline">#</a></h3>
 <p>Nykyisin yleisin lainamuoto asunto- ja kulutusluotoissa on <strong>tasaerälaina</strong>, jossa laina maksetaan takaisin koko laina-ajan samansuuruisina pysyvinä suorituksina, jotka sisältävät sekä lyhennyksen että koron.</p>
-<p>Alla on kaava maksuerän suuruuden laskemiseen.  Kaava voidaan johtaa käyttämällä geometrisen sarjan summan kaavaa, joka löytyy kaavakirjoista. <strong>Kaavan perustelu löytyy tämän sivun lopusta</strong></p>
+<p>Alla on kaava maksuerän suuruuden laskemiseen.  Kaava voidaan johtaa käyttämällä geometrisen sarjan summan kaavaa, joka löytyy kaavakirjoista. <strong>Kaavan perustelu löytyy tämän sivun lopussa olevasta liitteestä</strong></p>
 <div class="tip admonition">
 <p class="admonition-title"><strong>Tasaerälainan maksuerän laskukaava</strong></p>
 <p><span class="math notranslate nohighlight">\(p=\frac{k\hspace{1mm}i}{1-(1+i)^{-n}}\)</span></p>
 <p>k = lainamäärä, i = korkojakson korkoprosentti, n = erien määrä</p>
-<p>Huom! Kaavaa vastaava Excel funktio on MAKSU (engl. Excelissä PMT)</p>
+<p>Huom! Calc ohjelmassa maksuerä saadaan funktiolla PMT(korko,erien määrä, lainamäärä)</p>
 </div>
 </section>
 <section id="esimerkki-kuukausieran-laskemisesta-kaavalla-ja-taulukkolaskentaohjelmalla">
@@ -565,7 +569,7 @@ soluun F2 kaava =B2-C2, sekä soluun B2 kaava =F2, joka kopioi lainapääoman se
 <p><span class="math notranslate nohighlight">\(p=\frac{k\hspace{1mm}i}{1-(1+i)^{-n}}\)</span>, missä k = lainattu summa, i = lyhennyskauden korko,<br />
 n = lyhennysten lukumäärä</p>
 <p>Sijoitusten jälkeen saadaan tasaeräksi <span class="math notranslate nohighlight">\(p= \frac{800\hspace{1mm}\cdot \hspace{1mm}0.005}{1-1.005^{-18}} = 46.59 \)</span></p>
-<p>Excel-ratkaisu: <span class="math notranslate nohighlight">\(\color{blue}{\text{=MAKSU(0,5%;18;800)}}\)</span>  (englanninkielisessä versiossa PMT)</p>
+<p>Calc ohjelmalla: <span class="math notranslate nohighlight">\(\color{blue}{\text{=PMT(0,5%;18;800)}}\)</span></p>
 </div>
 </section>
 <section id="tasaeralainan-lainalaskelman-tekeminen-taulukkolaskentaohjelmalla">
@@ -604,19 +608,6 @@ n = lyhennysten lukumäärä (laina-aika) ja K on viimeiseen erään lisätty ns
 </div>
 </section>
 </section>
-<section id="tasaeralainan-kk-maksun-laskukaavan-perustelu">
-<h3>Tasaerälainan kk-maksun laskukaavan perustelu<a class="headerlink" href="#tasaeralainan-kk-maksun-laskukaavan-perustelu" title="Permalink to this headline">#</a></h3>
-<p>(Tämän voi ohittaa, ei tarvita laskuissa)
-Esim. Laskettava <strong>1000 euron lainan kk-erä, kun kk-korko on 1.0% ja erien määrä on 10</strong>.</p>
-<p>Periaate: Tulevat maksuerät diskontataan lainan antohetkeen, summaksi pitää tulla lainasumma.</p>
-<p>Merkitään vakiona pysyvää maksuerää p:llä.  1. erä maksetaan kuukauden kuluttua ja sillä on 1% korko, joten sen arvo lainan antohetkellä on <span class="math notranslate nohighlight">\(\frac {p}{1.01}\)</span>,  seuraava erä maksetaan 2 kk kuluttua. Sen arvo lainan antohetkellä on <span class="math notranslate nohighlight">\(\frac {p}{1.01^2}\)</span> j.n.e.
-Erien nykyarvojen summan pitää olla sama kuin lainattu summa, josta saadaan yhtälö</p>
-<p><span class="math notranslate nohighlight">\(1000 = \frac {p}{1.01} + \frac {p}{1.01^2} + .... + \frac {p}{1.01^{10}}\)</span> =&gt; <span class="math notranslate nohighlight">\(1000 = p(\frac {1}{1.01} + \frac {1}{1.01^2} + .... + \frac {1}{1.01^{10}})\)</span> =&gt; <span class="math notranslate nohighlight">\(p = \frac{1000}{\frac {1}{1.01} + \frac {1}{1.01^2} + .... + \frac {1}{1.01^{10}}}\)</span></p>
-<p>Nimittäjä on 10 termin geometrinen jono, jonka 1. termi a ja suhdeluku q ovat <span class="math notranslate nohighlight">\(\frac{1}{1.01}\)</span>. Geometrisen jonon summakaavalla S = <span class="math notranslate nohighlight">\(a \frac {1-q^n}{1-q}\)</span> nimittäjän arvoksi tulee <span class="math notranslate nohighlight">\(\frac{1}{1.01}*\frac {1-\frac{1}{1.01}^{10}}{1-\frac{1}{1.01}} = 9.4713\)</span>.  Siten kuukausierä <span class="math notranslate nohighlight">\(p = \frac {1000}{9.4713} = 105.58\)</span></p>
-<p>Aiemmin esitetty maksuerän kaava <span class="math notranslate nohighlight">\(p = \frac {k\cdot i}{1-(1+i)^{-n}}\)</span> lyhentää laskun muotoon <span class="math notranslate nohighlight">\(p = \frac {1000\cdot 0.01}{1-(1+0.01)^{-10}} = 105.58\)</span></p>
-<p>Laskimeen tämä syötetään muodossa 1000*0.01/(1-1.01^-10). Maksuerän laskussa tuskin koskaan käytetään tätä kaavaa, koska kaavan sisältämä valmisfunktio on uusissa laskimissa nimellä PMT, kuten myös taulukkolaskentaohjelmissa.</p>
-<p>Excelissä <strong>= PMT(0.01;10;1000)</strong>  antaa 105.58    (argumentit järjestyksessä: korko, erien määrä ja lainamäärä)</p>
-</section>
 </section>
 <section id="efektiivinen-korko">
 <h2>Efektiivinen korko<a class="headerlink" href="#efektiivinen-korko" title="Permalink to this headline">#</a></h2>
@@ -649,8 +640,8 @@ Erien nykyarvojen summan pitää olla sama kuin lainattu summa, josta saadaan yh
 </div>
 </section>
 </section>
-<section id="tasaerasaastaminen">
-<h2>Tasaeräsäästäminen<a class="headerlink" href="#tasaerasaastaminen" title="Permalink to this headline">#</a></h2>
+<section id="rahastosaastaminen-tasaerina">
+<h2>Rahastosäästäminen tasaerinä<a class="headerlink" href="#rahastosaastaminen-tasaerina" title="Permalink to this headline">#</a></h2>
 <p>Geometrista sarjaa käytetään myös laskettaessa tasaerinä tapahtuvan säästämisen loppusaldon laskemisessa.
 Olkoon p vakiona pysyvä kk-talletus, i = kuukausikorko r = 1 + i on vastaava korkotekijä ja n = jaksojen määrä.</p>
 <p>Tällöin Loppusaldo <span class="math notranslate nohighlight">\(S = p\cdot r^n + p\cdot r^{n-1} + ....+ p\cdot r^2 + p\cdot r\)</span> , missä korkotekijä <strong>r = 1 + i</strong></p>
@@ -663,6 +654,15 @@ Olkoon p vakiona pysyvä kk-talletus, i = kuukausikorko r = 1 + i on vastaava ko
 <p><span class="math notranslate nohighlight">\(S = 50\cdot 1.0025 \frac{1.0025^{60}-1}{0.0025} = 3240.4\)</span></p>
 <p>Vastaus: 3240 euroa.</p>
 </div>
+<section id="liite-tasaeran-laskukaavan-johtaminen-geometrisen-sarjan-summan-kaavalla">
+<h3>Liite: Tasaerän laskukaavan johtaminen geometrisen sarjan summan kaavalla<a class="headerlink" href="#liite-tasaeran-laskukaavan-johtaminen-geometrisen-sarjan-summan-kaavalla" title="Permalink to this headline">#</a></h3>
+<p>Esim. <strong>Olkoon lainasumma k, erien määrä n, korkoprosentti i, ja korkokerroin 1 + i = r, p = laskettava maksuerä</strong>.</p>
+<p>Periaate: Maksujen arvojen summa lainan ottohetkeen muunnettuna = lainan määrä.</p>
+<p><span class="math notranslate nohighlight">\(k = \frac {p}{r} + \frac {p}{r^2} + .... + \frac {p}{r^n}\)</span> =&gt; <span class="math notranslate nohighlight">\(k = p(\frac {1}{r} + \frac {1}{r^2} + .... + \frac {1}{r^{n}})\)</span> =&gt; <span class="math notranslate nohighlight">\(p = \frac{k}{\frac {1}{r} + \frac {1}{r^2} + .... + \frac {1}{r^{n}}}\)</span></p>
+<p>Nimittäjä on geometrinen jono, jossa on n termiä, 1. termi a ja suhdeluku q ovat <span class="math notranslate nohighlight">\(\frac{1}{r}\)</span>.<br />
+Geometrisen jonon summakaavalla <span class="math notranslate nohighlight">\(S = a \frac {1-q^n}{1-q}\)</span> nimittäjä voidaan kirjoittaa muodossa <span class="math notranslate nohighlight">\(\frac{1}{r} \frac {1-\frac{1}{r}^{n}}{1-\frac{1}{r}} = \frac {1-\frac{1}{r}^{n}}{r-1}= \frac {1-r^{-n}}{i}\)</span>.</p>
+<p>Siten  <span class="math notranslate nohighlight">\(p = \frac {k}{\frac {1-r^{-n}}{i}} =\frac {k\cdot i}{1-r^{-n}} = \frac {k\cdot i}{1-(1+i)^{-n}} \)</span></p>
+</section>
 </section>
 </section>
 
