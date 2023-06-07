@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Sisällysluettelo &#8212; MAB taloausmatematiikkaa</title>
+    <title>Korko &#8212; MAB taloausmatematiikkaa</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,9 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Prosenttilaskut" href="prosenttilaskut.html" />
+    <link rel="next" title="Tehtäviä osaan MAB6" href="tehtavia_MAB6.html" />
+    <link rel="prev" title="Valuutat" href="valuutat.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,8 +104,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Sisällysluettelo
                 </a>
             </li>
@@ -112,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
   MAB6 kauppamatikan perusteita
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="prosenttilaskut.html">
    Prosenttilaskut
@@ -133,8 +136,8 @@ const thebe_selector_output = ".output, .cell_output"
    Valuutat
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="korot.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Korko
   </a>
  </li>
@@ -163,11 +166,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="pitkaaikaiset_lainat.html">
    Pitkäaikaiset lainat
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tehtavia_MAB7.html">
-   Tehtäviä osaan MAB7
   </a>
  </li>
 </ul>
@@ -229,7 +227,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/jteeriaho/MAB67.git/main?urlpath=tree/intro.ipynb"
+        <a href="https://mybinder.org/v2/gh/jteeriaho/MAB67.git/main?urlpath=tree/korot.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -289,7 +287,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/jteeriaho/MAB67.git/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/jteeriaho/MAB67.git/issues/new?title=Issue%20on%20page%20%2Fkorot.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -317,7 +315,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/intro.ipynb"
+        <a href="_sources/korot.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -354,23 +352,114 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mita-tarkoitetaan-korolla">
+   Mitä tarkoitetaan korolla?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#korkotyypit">
+     Korkotyypit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#yksinkertaisen-korkolaskun-kaavat-ja-kaavassa-kaytetyt-symbolit">
+     Yksinkertaisen korkolaskun kaavat ja kaavassa käytetyt symbolit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esimerkkeja">
+     Esimerkkejä
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nykyarvon-laskeminen-eli-diskonttaus">
+     Nykyarvon laskeminen eli diskonttaus
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kaavassa-esiintyvan-ajan-t-muuntaminen-vuosiksi-vaihtelee-eri-maissa">
+     Kaavassa esiintyvän ajan t muuntaminen vuosiksi vaihtelee eri maissa
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Sisällysluettelo</h1>
+                <h1>Korko</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mita-tarkoitetaan-korolla">
+   Mitä tarkoitetaan korolla?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#korkotyypit">
+     Korkotyypit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#yksinkertaisen-korkolaskun-kaavat-ja-kaavassa-kaytetyt-symbolit">
+     Yksinkertaisen korkolaskun kaavat ja kaavassa käytetyt symbolit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esimerkkeja">
+     Esimerkkejä
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nykyarvon-laskeminen-eli-diskonttaus">
+     Nykyarvon laskeminen eli diskonttaus
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kaavassa-esiintyvan-ajan-t-muuntaminen-vuosiksi-vaihtelee-eri-maissa">
+     Kaavassa esiintyvän ajan t muuntaminen vuosiksi vaihtelee eri maissa
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -378,16 +467,73 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="sisallysluettelo">
-<h1>Sisällysluettelo<a class="headerlink" href="#sisallysluettelo" title="Permalink to this headline">#</a></h1>
-<p><strong>Kaupallisen matematiikan perusteita (MAB6):</strong><br />
-Prosenttilaskenta,verotus, indeksit, rahan arvo, valuutat, korot, tehtäviä</p>
-<p><strong>Kaupallisen matematiikan jatko-osa (MAB7)</strong><br />
-Aritmeettinen ja geometrinen jono. Koronkorkolaskut. Pitkät lainat, tehtäviä</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="korko">
+<h1>Korko<a class="headerlink" href="#korko" title="Permalink to this headline">#</a></h1>
+<section id="mita-tarkoitetaan-korolla">
+<h2>Mitä tarkoitetaan korolla?<a class="headerlink" href="#mita-tarkoitetaan-korolla" title="Permalink to this headline">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Koron määritelmä</p>
+<p><strong>Korko</strong> on rahan lainaamisesta lainan antajalle maksettava korvaus.</p>
 </div>
-<div class="toctree-wrapper compound">
+<section id="korkotyypit">
+<h3>Korkotyypit<a class="headerlink" href="#korkotyypit" title="Permalink to this headline">#</a></h3>
+<blockquote>
+<div><p><strong>Yksinkertainen korko</strong> on harvinaisempi korkotyypeistä. Sitä voidaan käyttää alle vuoden kestävien lainojen yhteydessä, mm. &gt;viivästyskorkojen laskennassa, ja pikavipeissä joiden laina-aika on muutamia kuukausia</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Koronkorko</strong> on yleisin koron laskentatapa, jota käytetään asuntolainoissa, kulutusluotoissa, osamaksukaupoissa, ja &gt;luottokorteissa.  (koronkorkoa käsitellään tarkemmin kurssissa MAB7)</p>
+</div></blockquote>
+</section>
+<section id="yksinkertaisen-korkolaskun-kaavat-ja-kaavassa-kaytetyt-symbolit">
+<h3>Yksinkertaisen korkolaskun kaavat ja kaavassa käytetyt symbolit<a class="headerlink" href="#yksinkertaisen-korkolaskun-kaavat-ja-kaavassa-kaytetyt-symbolit" title="Permalink to this headline">#</a></h3>
+<p><strong>i = korkoprosentti</strong> p.a (per annum = vuotta kohden).  Laskuissa des.lukuna: esim. 12% = 0.12</p>
+<p><strong>t = laina-aika vuosina</strong> ( esim. 2 kk =&gt; t = 2/12 v,   30 pv =&gt;  t = 30/365 v)</p>
+<p><strong>k = otettu lainamäärä</strong>, alkupääoma</p>
+<p><strong>I = maksettava korko</strong>, joka lasketaan kaavalla <span class="math notranslate nohighlight">\(I = k i t\)</span></p>
+<p><strong>K = takaisin maksettava summa</strong> = lainasumma + korko:   kaava  <span class="math notranslate nohighlight">\(K = k + I = k + k i t = k (1 + i t)\)</span></p>
+</section>
+<section id="esimerkkeja">
+<h3>Esimerkkejä<a class="headerlink" href="#esimerkkeja" title="Permalink to this headline">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Laske korko ja takaisin maksettava summa 2 kk:n pikalainasta, jonka korkoprosentti on 12 ja lainan määrä 500 euroa.</p>
+<p>Korko = <span class="math notranslate nohighlight">\(I = k i t = 500\cdot0.12\frac{2}{12} = 10 \)</span> euroa<br />
+Maksettava summa = k + I = 500 + 10 = 510 euroa</p>
 </div>
+<div class="dropdown admonition">
+<p class="admonition-title">Matti maksaa 400 euron kiinteistöveron 30 pv myöhässä. Viivästyskorko on 9 %. Verovelvollinen joutuu laskemaan itse maksettavan summan. Mikä se on tässä tapauksessa?</p>
+<p>Viivästysorko = <span class="math notranslate nohighlight">\(I = k i t = 400\cdot0.09\frac{30}{365} = 2.96 \)</span> euroa<br />
+Maksettava summa <span class="math notranslate nohighlight">\(K = k + I = 400 + 2.96 = 402.96 \)</span> euroa</p>
+</div>
+</section>
+<section id="nykyarvon-laskeminen-eli-diskonttaus">
+<h3>Nykyarvon laskeminen eli diskonttaus<a class="headerlink" href="#nykyarvon-laskeminen-eli-diskonttaus" title="Permalink to this headline">#</a></h3>
+<p>Esim. panttilainaamoissa korko voidaan periä jo lainan antohetkellä etukäteen. Asiakas saa siten käteen lainasummaa pienemmän rahamäärän, joka on takaisin maksettavan lainasumman nykyarvo lainanantohetkellä.</p>
+<blockquote>
+<div><p>Nykyarvo lasketaan ratkaisemalla k  kaavasta K = k (1 + i t) , jolloin saadaan</p>
+</div></blockquote>
+<blockquote>
+<div><p>Nykyarvo <span class="math notranslate nohighlight">\(k =\frac{K}{1+i t}\)</span></p>
+</div></blockquote>
+<div class="dropdown admonition">
+<p class="admonition-title">Seija ottaa panttilainaamosta erästä maisemataulua vastaan 1000 euron lainan, jonka laina-aika on 3 kk ja korko 12 %.  Korko peritään laina-ajan alussa ja takaisin maksettava summa on tasan 1000 euroa 3kk kuluttua.</p>
+<p>Seijan käteen saama summa <span class="math notranslate nohighlight">\(k = \frac {K}{1+it}=\frac {1000}{1+0.12\frac{3}{12}} = 970.87\)</span>€<br />
+(etukäteen peritty korko on siten n. 29 euroa)</p>
+<p>Vastaus: 970.87$</p>
+</div>
+</section>
+<section id="kaavassa-esiintyvan-ajan-t-muuntaminen-vuosiksi-vaihtelee-eri-maissa">
+<h3>Kaavassa esiintyvän ajan t muuntaminen vuosiksi vaihtelee eri maissa<a class="headerlink" href="#kaavassa-esiintyvan-ajan-t-muuntaminen-vuosiksi-vaihtelee-eri-maissa" title="Permalink to this headline">#</a></h3>
+<p><strong>Suomi, pohjoismaat, Englanti:</strong>   <span class="math notranslate nohighlight">\(t = \frac{kalenteripäivät}{365} \)</span></p>
+<p><strong>Saksa, Ranska:</strong>   <span class="math notranslate nohighlight">\(t = \frac{kalenteripäivät}{360} \)</span></p>
+<p><strong>Sveitsi:</strong>   <span class="math notranslate nohighlight">\(t = \frac{pv}{360} \)</span>, missä päiviä pv laskettaessa oletetaan, että jokaisessa kuussa on 30 päivää</p>
+<p>Esim. jos 1000 euron laina 12% korolla otetaan 1.2.2023 ja maksupäivä on 1.5.2023, niin</p>
+<blockquote>
+<div><p>Suomessa korko olisi 1000<em>0.12</em>89/365 = 29.26 euroa,<br />
+Ranskassa korko olisi 1000<em>0.12</em>89/360 = 29.67 euroa<br />
+Sveitsissä 1000<em>0.12</em>90/360 = 30 euroa.</p>
+</div></blockquote>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -417,10 +563,17 @@ Aritmeettinen ja geometrinen jono. Koronkorkolaskut. Pitkät lainat, tehtäviä<
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="prosenttilaskut.html" title="next page">
+    <a class='left-prev' id="prev-link" href="valuutat.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Valuutat</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="tehtavia_MAB6.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Prosenttilaskut</p>
+        <p class="prev-next-title">Tehtäviä osaan MAB6</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

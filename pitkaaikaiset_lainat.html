@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Pitkäaikaiset lainat &#8212; MAB taloausmatematiikkaa</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tehtäviä osaan MAB7" href="tehtavia_MAB7.html" />
+    <link rel="prev" title="Koronkorkolaskut" href="koronkorkolaskut.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">MAB taloausmatematiikkaa</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Sisällysluettelo
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MAB6 kauppamatikan perusteita
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="prosenttilaskut.html">
+   Prosenttilaskut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="verotus.html">
+   Verotus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="indeksit.html">
+   Indeksit ja rahan arvo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="valuutat.html">
+   Valuutat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="korot.html">
+   Korko
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tehtavia_MAB6.html">
+   Tehtäviä osaan MAB6
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MAB7 kauppamatikan jatko-osa
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lukujonot.html">
+   Lukujonot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="koronkorkolaskut.html">
+   Koronkorkolaskut
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Pitkäaikaiset lainat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tehtavia_MAB7.html">
+   Tehtäviä osaan MAB7
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/jteeriaho/MAB67.git/main?urlpath=tree/pitkaaikaiset_lainat.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/jteeriaho/MAB67.git"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/jteeriaho/MAB67.git/issues/new?title=Issue%20on%20page%20%2Fpitkaaikaiset_lainat.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/pitkaaikaiset_lainat.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tasalyhennyslainan-lyhennyslaskelma">
+   Tasalyhennyslainan lyhennyslaskelma
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annuiteettilaina-eli-tasaeralaina">
+   Annuiteettilaina eli tasaerälaina
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tasaeralainan-kk-maksun-laskukaava">
+     Tasaerälainan kk-maksun laskukaava
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esimerkki-kuukausieran-laskemisesta-kaavalla-ja-taulukkolaskentaohjelmalla">
+     Esimerkki kuukausierän laskemisesta kaavalla ja taulukkolaskentaohjelmalla
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tasaeralainan-lainalaskelman-tekeminen-taulukkolaskentaohjelmalla">
+     Tasaerälainan lainalaskelman tekeminen taulukkolaskentaohjelmalla
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era">
+     Tasaerälaina, johon sisältyy “suurempi viimeinen erä”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tasaeralainan-kk-maksun-laskukaavan-perustelu">
+     Tasaerälainan kk-maksun laskukaavan perustelu
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#efektiivinen-korko">
+   Efektiivinen korko
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esimerkki-efektiivisen-koron-laskemisesta-kaavalla-ja-calc-ohjelmalla">
+     Esimerkki efektiivisen koron laskemisesta kaavalla ja calc-ohjelmalla
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tasaerasaastaminen">
+   Tasaeräsäästäminen
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Pitkäaikaiset lainat</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tasalyhennyslainan-lyhennyslaskelma">
+   Tasalyhennyslainan lyhennyslaskelma
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annuiteettilaina-eli-tasaeralaina">
+   Annuiteettilaina eli tasaerälaina
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tasaeralainan-kk-maksun-laskukaava">
+     Tasaerälainan kk-maksun laskukaava
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esimerkki-kuukausieran-laskemisesta-kaavalla-ja-taulukkolaskentaohjelmalla">
+     Esimerkki kuukausierän laskemisesta kaavalla ja taulukkolaskentaohjelmalla
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tasaeralainan-lainalaskelman-tekeminen-taulukkolaskentaohjelmalla">
+     Tasaerälainan lainalaskelman tekeminen taulukkolaskentaohjelmalla
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era">
+     Tasaerälaina, johon sisältyy “suurempi viimeinen erä”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tasaeralainan-kk-maksun-laskukaavan-perustelu">
+     Tasaerälainan kk-maksun laskukaavan perustelu
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#efektiivinen-korko">
+   Efektiivinen korko
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esimerkki-efektiivisen-koron-laskemisesta-kaavalla-ja-calc-ohjelmalla">
+     Esimerkki efektiivisen koron laskemisesta kaavalla ja calc-ohjelmalla
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tasaerasaastaminen">
+   Tasaeräsäästäminen
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="pitkaaikaiset-lainat">
+<h1>Pitkäaikaiset lainat<a class="headerlink" href="#pitkaaikaiset-lainat" title="Permalink to this headline">#</a></h1>
+<p><strong>Lainalaskelma</strong> on taulukko, jossa on kunkin kuukauden maksettava summa jaettuna lyhennyksen ja korkoon, sekä uusi lainapääoma maksun jälkeen.</p>
+<p>Lainojen päätyypit ovat <strong>tasalyhennyslaina</strong> ja <strong>tasaerälaina</strong>.</p>
+<blockquote>
+<div><p><strong>Tasalyhennyslainassa</strong> lainapääoma lyhenee saman määrän joka kuukausi, kun taas koron osuus pienenee lainapääoman pienentyessä.<br />
+<img alt="tasl" src="_images/tasalyh.png" /></p>
+<p><strong>Tasaerälainassa</strong> kuukausimaksu on sama koko laina-ajan. Alussa koron osuus on suuri ja lyhennys pieni. Laina-ajan loppupuolella korko lähestyy nollaa, ja lainapääoma lyhenee nopeasti. Tasaerälaina on nykyään yleisin.
+<img alt="tasl" src="_images/tasaera.png" /></p>
+</div></blockquote>
+<section id="tasalyhennyslainan-lyhennyslaskelma">
+<h2>Tasalyhennyslainan lyhennyslaskelma<a class="headerlink" href="#tasalyhennyslainan-lyhennyslaskelma" title="Permalink to this headline">#</a></h2>
+<p><strong>Esimerkkinä 900 euron tasalyhennyslaina, jonka laina-aika on 6 kk, nimelliskorko 6% =&gt; kk-korko on 0.5%</strong><br />
+<img alt="tasal" src="_images/tllaskelma.png" /></p>
+<p><strong>Ohje laskeman laatimiseen</strong></p>
+<ol class="simple">
+<li><p>Kirjoita soluun B2 lainan suuruus 900. Laske kk-lyhennys 900/6 = 150 ja kirjoita se kaikiin C sarakkeen soluihin.</p></li>
+<li><p>Kirjoita 4 kaavaa:  soluun D2 kaava =0,5/100*B2,  soluun E2 kaaava =C2 + D2<br />
+soluun F2 kaava =B2-C2, sekä soluun B2 kaava =F2, joka kopioi lainapääoman seuraavalle kuukaudelle.</p></li>
+<li><p>Kopioi kaikki kaavat alas vetämällä kaavasolun oikeasta alakulmasta</p></li>
+</ol>
+</section>
+<section id="annuiteettilaina-eli-tasaeralaina">
+<h2>Annuiteettilaina eli tasaerälaina<a class="headerlink" href="#annuiteettilaina-eli-tasaeralaina" title="Permalink to this headline">#</a></h2>
+<section id="tasaeralainan-kk-maksun-laskukaava">
+<h3>Tasaerälainan kk-maksun laskukaava<a class="headerlink" href="#tasaeralainan-kk-maksun-laskukaava" title="Permalink to this headline">#</a></h3>
+<p>Nykyisin yleisin lainamuoto asunto- ja kulutusluotoissa on <strong>tasaerälaina</strong>, jossa laina maksetaan takaisin koko laina-ajan samansuuruisina pysyvinä suorituksina, jotka sisältävät sekä lyhennyksen että koron.</p>
+<p>Alla on kaava maksuerän suuruuden laskemiseen.  Kaava voidaan johtaa käyttämällä geometrisen sarjan summan kaavaa, joka löytyy kaavakirjoista. <strong>Kaavan perustelu löytyy tämän sivun lopusta</strong></p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Tasaerälainan maksuerän laskukaava</strong></p>
+<p><span class="math notranslate nohighlight">\(p=\frac{k\hspace{1mm}i}{1-(1+i)^{-n}}\)</span></p>
+<p>k = lainamäärä, i = korkojakson korkoprosentti, n = erien määrä</p>
+<p>Huom! Kaavaa vastaava Excel funktio on MAKSU (engl. Excelissä PMT)</p>
+</div>
+</section>
+<section id="esimerkki-kuukausieran-laskemisesta-kaavalla-ja-taulukkolaskentaohjelmalla">
+<h3>Esimerkki kuukausierän laskemisesta kaavalla ja taulukkolaskentaohjelmalla<a class="headerlink" href="#esimerkki-kuukausieran-laskemisesta-kaavalla-ja-taulukkolaskentaohjelmalla" title="Permalink to this headline">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Esim. Maija ostaa tietokoneen luotolla, jonka maksuaika on 18 kk. Luottosumma on 800 Euroa, korko 6% vuodessa eli 0.5% kk:ssa. Mikä on kuukausierän suuruus?</p>
+<p>Periaate:  Maksuerien nykyarvojen summan on oltava yhtäsuuri kuin ostohinta.</p>
+<p>Kuukausierä p on yhtälön <span class="math notranslate nohighlight">\(800 = \frac {p}{1.005}+ \frac {p}{1.005^2} + ... + \frac {p}{1.005^{18}}\)</span> ratkaisu.</p>
+<p>Yhtälö on liian pitkä laskimella ratkaistavaksi. Käytetään <strong>tasaerän laskukaavaa</strong></p>
+<p><span class="math notranslate nohighlight">\(p=\frac{k\hspace{1mm}i}{1-(1+i)^{-n}}\)</span>, missä k = lainattu summa, i = lyhennyskauden korko,<br />
+n = lyhennysten lukumäärä</p>
+<p>Sijoitusten jälkeen saadaan tasaeräksi <span class="math notranslate nohighlight">\(p= \frac{800\hspace{1mm}\cdot \hspace{1mm}0.005}{1-1.005^{-18}} = 46.59 \)</span></p>
+<p>Excel-ratkaisu: <span class="math notranslate nohighlight">\(\color{blue}{\text{=MAKSU(0,5%;18;800)}}\)</span>  (englanninkielisessä versiossa PMT)</p>
+</div>
+</section>
+<section id="tasaeralainan-lainalaskelman-tekeminen-taulukkolaskentaohjelmalla">
+<h3>Tasaerälainan lainalaskelman tekeminen taulukkolaskentaohjelmalla<a class="headerlink" href="#tasaeralainan-lainalaskelman-tekeminen-taulukkolaskentaohjelmalla" title="Permalink to this headline">#</a></h3>
+<p><strong>Esimerkkinä 900 euron tasaerälaina, jonka laina-aika on 6 kk, nimelliskorko 6% =&gt; kk-korko on 0.5%</strong><br />
+<img alt="tasaera" src="_images/telaskelma.png" /></p>
+<p><strong>Ohje laskeman laatimiseen</strong></p>
+<ol class="simple">
+<li><p>Lasketaan kk-erä kaavalla <span class="math notranslate nohighlight">\(p=\frac{k\hspace{1mm}i}{1-(1+i)^{-n}} =\frac{900\hspace{1mm}0.005}{1-(1+0.005)^{-6}}=152.636 \)</span> tai käyttämällä taulukkolaskentaohjelman valmisfunktiota PMT (suom. MAKSU). Kirjoita soluun B2 lainan suuruus ja täytä E sarake maksurän suuruudella 152.636</p></li>
+<li><p>Kirjoita 4 kaavaa seuraavassa järjestyksessä:  soluun D2 kaava =0,5/100*B2,  soluun C2 kaaava = E2 - D2<br />
+soluun F2 kaava =B2-C2, sekä soluun B2 kaava =F2, joka kopioi lainapääoman seuraavalle kuukaudelle.</p></li>
+<li><p>Kopioi kaikki kaavat alas vetämällä kaavasolun oikeasta alakulmasta</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Tasaerälaina, jossa viimeiseen erään on lisätty lainan jäännösarvo</strong></p>
+<p><span class="math notranslate nohighlight">\(p=\frac{k\hspace{1mm}i-K\hspace{1mm}i (1+i)^{-n}}{1-(1+i)^{-n}}\)</span></p>
+<p>k = lainamäärä, i = korkojakson korkoprosentti, n = erien määrä, K = jäännösarvo</p>
+<p>Huom! Kaavaa vastaava Excel funktio on MAKSU (engl. Excelissä PMT)</p>
+</div>
+</section>
+<section id="tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era">
+<h3>Tasaerälaina, johon sisältyy “suurempi viimeinen erä”<a class="headerlink" href="#tasaeralaina-johon-sisaltyy-suurempi-viimeinen-era" title="Permalink to this headline">#</a></h3>
+<p><strong>Moni autoliike mainostaa vaihtoautoja seuraavasti:  Auton hinta on 6000 euroa, rahoitus 36 kk maksuajalla ja 0.5% kk-korolla antaa kuukausieräksi 131.69. Viimeinen maksuerä on 2000 euroa suurempi.</strong></p>
+<p>**Tällä tavalla saadaan kuukausierää pienennettyä. Lainaa ei siisä makset loppuun saakka, vaan asiakas jää 2000 euroa velkaa sopimuksen loppuessa, mikä usein johtaa siihen, että asiakas jatkaa asiakkuuttaan ja tekee sopimuksen uudesta vaihtoautosta.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Esim. Eero ostaa vaihtoauton osamaksulla, jonka maksuaika on 36 kk. Luottosumma on 6000 euroa, korko 6% vuodessa eli 0.5% kk:ssa. Mikä on kuukausierän suuruus, kun viimeiseen erään on lisätty jäännösarvo 2000 euroa?</p>
+<p>Periaate:  Maksuerien nykyarvojen summan on oltava yhtäsuuri kuin ostohinta.</p>
+<p>Käytetään <strong>laskukaavaa</strong></p>
+<p><span class="math notranslate nohighlight">\(p=\frac{k\hspace{1mm}i-K\hspace{1mm}i (1+i)^{-n}}{1-(1+i)^{-n}}\)</span>, missä k = lainattu summa, i = lyhennyskauden korko,<br />
+n = lyhennysten lukumäärä (laina-aika) ja K on viimeiseen erään lisätty ns. jäännösarvo</p>
+<p>Sijoitusten jälkeen saadaan tasaeräksi
+<span class="math notranslate nohighlight">\(p=\frac{6000\hspace{1mm}0.05-2000\hspace{1mm}0.005\cdot 1.005^{-36}}{1-1.005^{-36}} = 131.69 \)</span></p>
+<p>Excel-ratkaisu: <span class="math notranslate nohighlight">\(\color{blue}{\text{=MAKSU(0,5%;36;5000,-2000)}}\)</span></p>
+</div>
+</section>
+<section id="tasaeralainan-kk-maksun-laskukaavan-perustelu">
+<h3>Tasaerälainan kk-maksun laskukaavan perustelu<a class="headerlink" href="#tasaeralainan-kk-maksun-laskukaavan-perustelu" title="Permalink to this headline">#</a></h3>
+<p>(Tämän voi ohittaa, ei tarvita laskuissa)
+Esim. Laskettava <strong>1000 euron lainan kk-erä, kun kk-korko on 1.0% ja erien määrä on 10</strong>.</p>
+<p>Periaate: Tulevat maksuerät diskontataan lainan antohetkeen, summaksi pitää tulla lainasumma.</p>
+<p>Merkitään vakiona pysyvää maksuerää p:llä.  1. erä maksetaan kuukauden kuluttua ja sillä on 1% korko, joten sen arvo lainan antohetkellä on <span class="math notranslate nohighlight">\(\frac {p}{1.01}\)</span>,  seuraava erä maksetaan 2 kk kuluttua. Sen arvo lainan antohetkellä on <span class="math notranslate nohighlight">\(\frac {p}{1.01^2}\)</span> j.n.e.
+Erien nykyarvojen summan pitää olla sama kuin lainattu summa, josta saadaan yhtälö</p>
+<p><span class="math notranslate nohighlight">\(1000 = \frac {p}{1.01} + \frac {p}{1.01^2} + .... + \frac {p}{1.01^{10}}\)</span> =&gt; <span class="math notranslate nohighlight">\(1000 = p(\frac {1}{1.01} + \frac {1}{1.01^2} + .... + \frac {1}{1.01^{10}})\)</span> =&gt; <span class="math notranslate nohighlight">\(p = \frac{1000}{\frac {1}{1.01} + \frac {1}{1.01^2} + .... + \frac {1}{1.01^{10}}}\)</span></p>
+<p>Nimittäjä on 10 termin geometrinen jono, jonka 1. termi a ja suhdeluku q ovat <span class="math notranslate nohighlight">\(\frac{1}{1.01}\)</span>. Geometrisen jonon summakaavalla S = <span class="math notranslate nohighlight">\(a \frac {1-q^n}{1-q}\)</span> nimittäjän arvoksi tulee <span class="math notranslate nohighlight">\(\frac{1}{1.01}*\frac {1-\frac{1}{1.01}^{10}}{1-\frac{1}{1.01}} = 9.4713\)</span>.  Siten kuukausierä <span class="math notranslate nohighlight">\(p = \frac {1000}{9.4713} = 105.58\)</span></p>
+<p>Aiemmin esitetty maksuerän kaava <span class="math notranslate nohighlight">\(p = \frac {k\cdot i}{1-(1+i)^{-n}}\)</span> lyhentää laskun muotoon <span class="math notranslate nohighlight">\(p = \frac {1000\cdot 0.01}{1-(1+0.01)^{-10}} = 105.58\)</span></p>
+<p>Laskimeen tämä syötetään muodossa 1000*0.01/(1-1.01^-10). Maksuerän laskussa tuskin koskaan käytetään tätä kaavaa, koska kaavan sisältämä valmisfunktio on uusissa laskimissa nimellä PMT, kuten myös taulukkolaskentaohjelmissa.</p>
+<p>Excelissä <strong>= PMT(0.01;10;1000)</strong>  antaa 105.58    (argumentit järjestyksessä: korko, erien määrä ja lainamäärä)</p>
+</section>
+</section>
+<section id="efektiivinen-korko">
+<h2>Efektiivinen korko<a class="headerlink" href="#efektiivinen-korko" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>Lainakorko ilmoitetaan useimmiten <strong>NIMELLISKORKONA</strong> (symboli i), esim. 6% vuodessa**</p>
+<p>Usein lainojen korkojakso on 1 kk ja maksut ovat kk:n välein</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Jos korkojakso on 1kk, nimelliskorosta pitää laskea kuukausikorko</strong>  <span class="math notranslate nohighlight">\(i_{kk}=\frac{1}{12}\)</span></p>
+<p><strong>Todellinen, “EFEKTIIVINEN KORKO” <span class="math notranslate nohighlight">\(i_{eff}\)</span>= 12 kuukauden korkokertoimien tulo, josta vähennetään 1</strong></p>
+<p><strong>Jos korkojakso on 1kk, niin</strong> <span class="math notranslate nohighlight">\(i_{eff} = (1+i_{kk})^{12}-1 = (1+\frac{i}{12})^{12}-1\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p>Joissakin lainoissa korkojakso voi olla muu kuin vuosi tai kuukausi, esim. 1/2 v tai 3 kk.</p>
+<p><strong>Yleinen  efektiivisen koron kaava on <span class="math notranslate nohighlight">\(i_{eff} = (1+\frac{i}{n})^{n}-1\)</span></strong>, n on korkojakson määrä vuodessa.</p>
+</div></blockquote>
+<blockquote>
+<div><p><em>Lain mukaan lainasopimuksissa on mainittava myös efektiivinen korko</em></p>
+</div></blockquote>
+<section id="esimerkki-efektiivisen-koron-laskemisesta-kaavalla-ja-calc-ohjelmalla">
+<h3>Esimerkki efektiivisen koron laskemisesta kaavalla ja calc-ohjelmalla<a class="headerlink" href="#esimerkki-efektiivisen-koron-laskemisesta-kaavalla-ja-calc-ohjelmalla" title="Permalink to this headline">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Kulutusluoton nimelliskorko on 12%. Mikä on todellinen eli efektiivinen vuosikorko?</p>
+<ol class="simple">
+<li><p>Lasketaan kuukausikorko:  <span class="math notranslate nohighlight">\(i_{kk}=12\% / 12 = 1\% = 0.01\)</span></p></li>
+<li><p>Lasketaan efektiivinen korko <span class="math notranslate nohighlight">\(i_{eff} = (1+i_{kk})^{12}-1 = (1+0.01)^{12}-1 = 1.01^{12}-1 = 0.127 = 12.68\%\)</span></p></li>
+</ol>
+<p>Tähänkin on olemassa taulukkolaskentaohjelmissa täsmäfunktio:</p>
+<p>=KORKO.EFEKT(nimelliskorko;kausia_vuodessa)=KORKO.EFEKT(12%;12) joka antaa 12.68%</p>
+</div>
+</section>
+</section>
+<section id="tasaerasaastaminen">
+<h2>Tasaeräsäästäminen<a class="headerlink" href="#tasaerasaastaminen" title="Permalink to this headline">#</a></h2>
+<p>Geometrista sarjaa käytetään myös laskettaessa tasaerinä tapahtuvan säästämisen loppusaldon laskemisessa.
+Olkoon p vakiona pysyvä kk-talletus, i = kuukausikorko r = 1 + i on vastaava korkotekijä ja n = jaksojen määrä.</p>
+<p>Tällöin Loppusaldo <span class="math notranslate nohighlight">\(S = p\cdot r^n + p\cdot r^{n-1} + ....+ p\cdot r^2 + p\cdot r\)</span> , missä korkotekijä <strong>r = 1 + i</strong></p>
+<p>Oikealta vasemmalle luettaessa huomataan, että tämä on geometrinen sarja, jonka 1. termi <span class="math notranslate nohighlight">\(a_1 = p\cdot r\)</span> ja suhdeluku <span class="math notranslate nohighlight">\(q = r\)</span>.</p>
+<p>Sarjan summa on <span class="math notranslate nohighlight">\(a_1\frac{1-q^n}{1-q}\)</span> eli tässä tapauksessa S = <span class="math notranslate nohighlight">\(p\cdot r\frac{1-r^n}{1-r}\)</span> = <span class="math notranslate nohighlight">\(p\cdot (1+i)\frac{1-(1+i)^n}{1-(1+i)} = p\cdot (1+i)\frac{(1+i)^n-1}{i}\)</span></p>
+<p><strong>Tasaeräsäästötilin loppusaldo  S =</strong> <span class="math notranslate nohighlight">\(p\cdot (1+i)\frac{(1+i)^n-1}{i}\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Esim. Tilille tallennetaan 5 vuoden ajan 50 euroa/kk. Nimelliskorko (per vuosi) = <span class="math notranslate nohighlight">\(3.0%\)</span> eli kk-korko on <span class="math notranslate nohighlight">\(0.25%\)</span>. Mikä on tilin loppusaldo? </p>
+<p>Sijoitetaan kaavaan S = <span class="math notranslate nohighlight">\(p\cdot (1+i)\frac{(1+i)^n-1}{i}\)</span> p = 50, i = 0.0025, ja n = 60. Saadaan</p>
+<p><span class="math notranslate nohighlight">\(S = 50\cdot 1.0025 \frac{1.0025^{60}-1}{0.0025} = 3240.4\)</span></p>
+<p>Vastaus: 3240 euroa.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="koronkorkolaskut.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Koronkorkolaskut</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="tehtavia_MAB7.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tehtäviä osaan MAB7</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Jouko Teeriaho<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

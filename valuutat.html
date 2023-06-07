@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Sisällysluettelo &#8212; MAB taloausmatematiikkaa</title>
+    <title>Valuutat &#8212; MAB taloausmatematiikkaa</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,9 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Prosenttilaskut" href="prosenttilaskut.html" />
+    <link rel="next" title="Korko" href="korot.html" />
+    <link rel="prev" title="Indeksit ja rahan arvo" href="indeksit.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,8 +104,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Sisällysluettelo
                 </a>
             </li>
@@ -112,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
   MAB6 kauppamatikan perusteita
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="prosenttilaskut.html">
    Prosenttilaskut
@@ -128,8 +131,8 @@ const thebe_selector_output = ".output, .cell_output"
    Indeksit ja rahan arvo
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="valuutat.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Valuutat
   </a>
  </li>
@@ -163,11 +166,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="pitkaaikaiset_lainat.html">
    Pitkäaikaiset lainat
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tehtavia_MAB7.html">
-   Tehtäviä osaan MAB7
   </a>
  </li>
 </ul>
@@ -229,7 +227,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/jteeriaho/MAB67.git/main?urlpath=tree/intro.ipynb"
+        <a href="https://mybinder.org/v2/gh/jteeriaho/MAB67.git/main?urlpath=tree/valuutat.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -289,7 +287,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/jteeriaho/MAB67.git/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/jteeriaho/MAB67.git/issues/new?title=Issue%20on%20page%20%2Fvaluutat.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -317,7 +315,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/intro.ipynb"
+        <a href="_sources/valuutat.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -354,23 +352,104 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#valuuttakurssit">
+   Valuuttakurssit
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esim-nordean-valuuttakursseista">
+     Esim. Nordean valuuttakursseista
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ulkomaan-valuutan-vaihto-euroiksi-esimerkkeja">
+     Ulkomaan valuutan vaihto euroiksi / esimerkkejä
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maaratyn-euromaaran-vaihtaminen-ulkomaan-valuutaksi">
+     Määrätyn euromäärän vaihtaminen ulkomaan valuutaksi
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pankkikortilla-maksu-ja-pankkiautomaatit-ulkomailla">
+     Pankkikortilla maksu ja pankkiautomaatit ulkomailla
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Sisällysluettelo</h1>
+                <h1>Valuutat</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#valuuttakurssit">
+   Valuuttakurssit
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esim-nordean-valuuttakursseista">
+     Esim. Nordean valuuttakursseista
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ulkomaan-valuutan-vaihto-euroiksi-esimerkkeja">
+     Ulkomaan valuutan vaihto euroiksi / esimerkkejä
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maaratyn-euromaaran-vaihtaminen-ulkomaan-valuutaksi">
+     Määrätyn euromäärän vaihtaminen ulkomaan valuutaksi
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pankkikortilla-maksu-ja-pankkiautomaatit-ulkomailla">
+     Pankkikortilla maksu ja pankkiautomaatit ulkomailla
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -378,16 +457,64 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="sisallysluettelo">
-<h1>Sisällysluettelo<a class="headerlink" href="#sisallysluettelo" title="Permalink to this headline">#</a></h1>
-<p><strong>Kaupallisen matematiikan perusteita (MAB6):</strong><br />
-Prosenttilaskenta,verotus, indeksit, rahan arvo, valuutat, korot, tehtäviä</p>
-<p><strong>Kaupallisen matematiikan jatko-osa (MAB7)</strong><br />
-Aritmeettinen ja geometrinen jono. Koronkorkolaskut. Pitkät lainat, tehtäviä</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="valuutat">
+<h1>Valuutat<a class="headerlink" href="#valuutat" title="Permalink to this headline">#</a></h1>
+<section id="valuuttakurssit">
+<h2>Valuuttakurssit<a class="headerlink" href="#valuuttakurssit" title="Permalink to this headline">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Mikä on valuuttakurssi</p>
+<p>Valuuttakurssi kertoo 1 Euron arvon ulkomaan valuutassa: 1 Euro = X Muu_Valuutta
+Suomi on Euromaa, joten Euroopan keskuspankki määrittää päivittäin ns. <strong>keskikurssit</strong></p>
+<blockquote>
+<div><p>Pankin laskevat keskikurssista <strong>myyntikurssin</strong> ja <strong>ostokurssin</strong>, jolla ne myyvät ja ostavat muita valuuttoja.
+Ero keskikurssiin johtuu pankin haluamasta valuutanvaihtoon liittyvästä marginaalista.<br />
+Sähköiselle “tilivaluutalle” marginaali on pienempi kuin käteiselle rahalle.</p>
+</div></blockquote>
 </div>
-<div class="toctree-wrapper compound">
+<section id="esim-nordean-valuuttakursseista">
+<h3>Esim. Nordean valuuttakursseista<a class="headerlink" href="#esim-nordean-valuuttakursseista" title="Permalink to this headline">#</a></h3>
+<p><img alt="nordea" src="_images/valuutat.png" /></p>
+</section>
+<section id="ulkomaan-valuutan-vaihto-euroiksi-esimerkkeja">
+<h3>Ulkomaan valuutan vaihto euroiksi / esimerkkejä<a class="headerlink" href="#ulkomaan-valuutan-vaihto-euroiksi-esimerkkeja" title="Permalink to this headline">#</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Muunnos euroiksi kun pankki myy ulkomaan rahaa</p>
+<p>euromäärä = ulkomaan valuutan määrä / myyntikurssi</p>
 </div>
+<div class="dropdown admonition">
+<p class="admonition-title">Maksat Nordean kautta 400 SEK:n laskun Ruotsiin. Paljonko maksat euroina?</p>
+<p>Nordea siis myy sinulla 400 Ruotsin kruunua, jonka myyntikurssi on 11.358 (ts. 1 € = 11.358 SEK)
+Euroiksi muutettuna summa on <strong>400/11.358 = 32.22 euroa</strong></p>
+</div>
+<p>Jos on epävarma, pitääkö jakaa vai kertoa kurssilla, voi ajatella ratkaisua myös verrannon avulla:</p>
+<p>1 euro  = 11.358 SEK
+x euroa = 400 SEK</p>
+<p>Tästä saadaan verranto <span class="math notranslate nohighlight">\(\frac {x}{1} = \frac {400}{11.358}\)</span></p>
+<div class="tip admonition">
+<p class="admonition-title">Muunnos euroiksi kun pankki ostaa ulkomaan rahaa</p>
+<p>euromäärä = ulkomaan valuutan määrä /ostokurssi</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Sinulle on jäänyt Lontoon matkalta ylimääräiset 150 GBP (puntaa), jonka haluat vaihtaa Helsingin lentoasemalla Euroiksi. Paljonko saat (olettaen, että käytetään Nordean taulukkoa, eikä vaihdosta menisi toimitusmaksua) </p>
+<p>Pankki ostaa sinulta 150 GBP, ostokurssin ollessa 0.8748  (ts. 1 € = 0.8748 GBP)
+Euroiksi muutettuna summa on 150/0.8748 = 171.48 euroa.</p>
+</div>
+</section>
+<section id="maaratyn-euromaaran-vaihtaminen-ulkomaan-valuutaksi">
+<h3>Määrätyn euromäärän vaihtaminen ulkomaan valuutaksi<a class="headerlink" href="#maaratyn-euromaaran-vaihtaminen-ulkomaan-valuutaksi" title="Permalink to this headline">#</a></h3>
+<p><strong>Tässä tapauksessa euromäärä kerrotaan ulkomaan valuutan kurssilla</strong></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Vaihdat laivalla 200 euroa Ruotsin kruunuiksi. Montako kruunua saat?</p>
+<p>Oletaan, että kurssit on ilmoitettu vaihtopisteessä kuten Suomessa (muoto 1 euro = X SEK)
+Saamasi määrä kruunuja on  200*11.358 = 2271.60 SEK</p>
+</div>
+</section>
+<section id="pankkikortilla-maksu-ja-pankkiautomaatit-ulkomailla">
+<h3>Pankkikortilla maksu ja pankkiautomaatit ulkomailla<a class="headerlink" href="#pankkikortilla-maksu-ja-pankkiautomaatit-ulkomailla" title="Permalink to this headline">#</a></h3>
+<p>Pankkikortit käyvät maksuvälineenä ulkomailla. Käteistä voi nostaa automaateista.
+Valuutan vaihto toimistoista ei ole kannattavaa kortin käyttöön verrattuna</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -417,10 +544,17 @@ Aritmeettinen ja geometrinen jono. Koronkorkolaskut. Pitkät lainat, tehtäviä<
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="prosenttilaskut.html" title="next page">
+    <a class='left-prev' id="prev-link" href="indeksit.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Indeksit ja rahan arvo</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="korot.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Prosenttilaskut</p>
+        <p class="prev-next-title">Korko</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

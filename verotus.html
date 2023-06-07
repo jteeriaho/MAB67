@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Sisällysluettelo &#8212; MAB taloausmatematiikkaa</title>
+    <title>Verotus &#8212; MAB taloausmatematiikkaa</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,9 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Prosenttilaskut" href="prosenttilaskut.html" />
+    <link rel="next" title="Indeksit ja rahan arvo" href="indeksit.html" />
+    <link rel="prev" title="Prosenttilaskut" href="prosenttilaskut.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,8 +104,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Sisällysluettelo
                 </a>
             </li>
@@ -112,14 +115,14 @@ const thebe_selector_output = ".output, .cell_output"
   MAB6 kauppamatikan perusteita
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="prosenttilaskut.html">
    Prosenttilaskut
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="verotus.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Verotus
   </a>
  </li>
@@ -163,11 +166,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="pitkaaikaiset_lainat.html">
    Pitkäaikaiset lainat
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tehtavia_MAB7.html">
-   Tehtäviä osaan MAB7
   </a>
  </li>
 </ul>
@@ -229,7 +227,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/jteeriaho/MAB67.git/main?urlpath=tree/intro.ipynb"
+        <a href="https://mybinder.org/v2/gh/jteeriaho/MAB67.git/main?urlpath=tree/verotus.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -289,7 +287,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/jteeriaho/MAB67.git/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/jteeriaho/MAB67.git/issues/new?title=Issue%20on%20page%20%2Fverotus.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -317,7 +315,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/intro.ipynb"
+        <a href="_sources/verotus.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -354,23 +352,124 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verokortti">
+   Verokortti
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuloveron-laskeminen-verokortin-tiedoista">
+     Tuloveron laskeminen verokortin tiedoista
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#valtionvero-on-progressiivinen">
+   Valtionvero on progressiivinen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paaomatulojen-verotus">
+   Pääomatulojen verotus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nettokorko-pankkitalletuksesta-sijoituksesta">
+   Nettokorko pankkitalletuksesta  / sijoituksesta
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arvonlisavero-eli-alv">
+   Arvonlisävero eli ALV
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lahja-ja-perintovero-on-progressiivinen">
+   Lahja- ja perintövero on progressiivinen
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Sisällysluettelo</h1>
+                <h1>Verotus</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verokortti">
+   Verokortti
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuloveron-laskeminen-verokortin-tiedoista">
+     Tuloveron laskeminen verokortin tiedoista
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#valtionvero-on-progressiivinen">
+   Valtionvero on progressiivinen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paaomatulojen-verotus">
+   Pääomatulojen verotus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nettokorko-pankkitalletuksesta-sijoituksesta">
+   Nettokorko pankkitalletuksesta  / sijoituksesta
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arvonlisavero-eli-alv">
+   Arvonlisävero eli ALV
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lahja-ja-perintovero-on-progressiivinen">
+   Lahja- ja perintövero on progressiivinen
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -378,16 +477,110 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="sisallysluettelo">
-<h1>Sisällysluettelo<a class="headerlink" href="#sisallysluettelo" title="Permalink to this headline">#</a></h1>
-<p><strong>Kaupallisen matematiikan perusteita (MAB6):</strong><br />
-Prosenttilaskenta,verotus, indeksit, rahan arvo, valuutat, korot, tehtäviä</p>
-<p><strong>Kaupallisen matematiikan jatko-osa (MAB7)</strong><br />
-Aritmeettinen ja geometrinen jono. Koronkorkolaskut. Pitkät lainat, tehtäviä</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="verotus">
+<h1>Verotus<a class="headerlink" href="#verotus" title="Permalink to this headline">#</a></h1>
+<section id="verokortti">
+<h2>Verokortti<a class="headerlink" href="#verokortti" title="Permalink to this headline">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Perusprosentti ja marginaaliveroprosentti</p>
+<p>Verokortissa on tiedot palkansaajan tuloveroista. Se sisältää perusprosentin ja tulorajan, johon saakka sitä sovelletaan, sekä liäsprosentin, joka peritään tulorajan ylittävistä tuloista (ns. marginaaliveroprosentti)</p>
 </div>
-<div class="toctree-wrapper compound">
+<section id="tuloveron-laskeminen-verokortin-tiedoista">
+<h3>Tuloveron laskeminen verokortin tiedoista<a class="headerlink" href="#tuloveron-laskeminen-verokortin-tiedoista" title="Permalink to this headline">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Maijan verokirjan perusprosentti on 28 ja lisäprosentti on 40. Tuloraja on 3600 eur/kk.  Maija ansaitsee maaliskuussa 4100 euroa.  Kuinka suuri on siitä pidätettävä vero? </p>
+<p>Koska tulot ylittävät tulorajan, tulorajan summasta pidätetään 28% ja ylimenevästä osasta 40%</p>
+<p><span class="math notranslate nohighlight">\(vero = 0.28*3600 + 0.40*(4100-3600) = 0.28*3600 + 0.40*500 = 1208 \)</span></p>
+<p>Vastaus: Vero on 1208 euroa</p>
 </div>
+<p><em>Tuloveron lisäksi Maijan tulee maksaa muita lakisääteisiä maksuja: kuten sairausvakuutusmaksu, työttämyysvakuutusmaksu, työeläkemaksut. Lisäksi kirkon ja AY-liikkeen jäsenmaksut peritään palkasta näihin kuuluvilta</em></p>
+</section>
+</section>
+<section id="valtionvero-on-progressiivinen">
+<h2>Valtionvero on progressiivinen<a class="headerlink" href="#valtionvero-on-progressiivinen" title="Permalink to this headline">#</a></h2>
+<p>Vuoden 2019 valtionverotaulukko näytti seuraavalta:</p>
+<p><img alt="vvero" src="_images/valtio.png" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Pekan verotettava tulo oli vuonna 2019 41000 euroa. Laske taulukon perusteella Pekan valtiolle maksama vero kyseisenä vuonna.     </p>
+<p>Pekan tulot ovat luokassa 26400 - 43500. Luokan alarajan suuruisesta osasta veroa menee 536 euroa, ja
+alarajan ylittävästä osasta 17.25 prosentin mukaan:</p>
+<p>Vero on siten <span class="math notranslate nohighlight">\( 536 + 0.1725*(41000 - 26400) = 3054.50\)</span></p>
+<p>Vastaus: Pekan valtionvero on 3091 euroa vuodessa.</p>
+</div>
+</section>
+<section id="paaomatulojen-verotus">
+<h2>Pääomatulojen verotus<a class="headerlink" href="#paaomatulojen-verotus" title="Permalink to this headline">#</a></h2>
+<p><strong>Pääomatuloja ovat mm. vuokratulot, osingot ja korkotuotot</strong></p>
+<p>Pääomaveroprosentti on 30,  kun tulot ovat enintään 30000 vuodessa.<br />
+Rajan ylimenevältä osalta prosentti on 34.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Maijalla oli vuonna 2022 pääomatuloja 45200 euroa. Laske veron suuruus.</p>
+<p><span class="math notranslate nohighlight">\( 0.30*30000 + 0.34*(45200-30000) = 14168 \)</span></p>
+<p>Vastaus:  14168 Euroa</p>
+</div>
+</section>
+<section id="nettokorko-pankkitalletuksesta-sijoituksesta">
+<h2>Nettokorko pankkitalletuksesta  / sijoituksesta<a class="headerlink" href="#nettokorko-pankkitalletuksesta-sijoituksesta" title="Permalink to this headline">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Nettokorko</p>
+<p>30 prosentin pääomaveroa sovelletaan talletuskorkoihin.</p>
+<p><strong>nettokorko = 0.7 * nimellinen korko</strong></p>
+<p>Esim. jos talletuskorko olisi 3.0 %, nettokorko olisi
+<span class="math notranslate nohighlight">\( 0.7*3.0\% = 2.1\%\)</span>  $</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Ari tallettaa 2000 euroa pankkiin 2.5% vuosikorolla. Mikä on sijoituksen arvo 5 vuoden kuluttua ottaen huomioon pääomaverotuksen?</p>
+<p>Nettokorko (korko verojen jälkeen) = <span class="math notranslate nohighlight">\( 0.7*2.5\% = 1.75 \)</span><br />
+Arvo 5 vuoden kuluttua  <span class="math notranslate nohighlight">\( 2000*1.0175^5 = 2181 euroa  \)</span></p>
+<p>Vastaus:  2181 Euroa</p>
+</div>
+</section>
+<section id="arvonlisavero-eli-alv">
+<h2>Arvonlisävero eli ALV<a class="headerlink" href="#arvonlisavero-eli-alv" title="Permalink to this headline">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">ALV - prosentit ilmoitetaan aina verottoman hinnan suhteen</p>
+<p>Suomessa yleinen ALV -prosentti on 24%<br />
+Alennettuja ALV - prosentteja on kaksi:<br />
+14% elintarvikkeet, ravintolapalvelut, ….
+10% kirjat, lääkkeet, liikunta- ja kulttuuripalvelut, matkustus, majoituspalvelut</p>
+<p><span class="math notranslate nohighlight">\(Verollinen hinta = 1.24*Veroton hinta\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">ALV:n ja verollisen hinnan laskeminen verottomasta hinnasta</p>
+<p><strong>Veroton hinta + ALV = verollinen hinta</strong><br />
+ALV = 24% verottomasta hinnasta, joten<br />
+<span class="math notranslate nohighlight">\(ALV = 0.24*veroton hinta\)</span>
+<span class="math notranslate nohighlight">\(verollinen hinta = 1.24*veroton hinta = veroton hinta + ALV\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Polkupyörän veroton hinta on 450 euroa. Laske ALV ja verollinen hinta?</p>
+<p>Verollinen hinta = <span class="math notranslate nohighlight">\( 450*1.24 = 558  \)</span> euroa<br />
+ALV = <span class="math notranslate nohighlight">\( 0.24*450  = 108   \)</span> euroa</p>
+<p>Vastaus:  verollinen hinta = 558 euroa, ALV =  108 euroa</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">ALV:n ja verottoman hinnan laskeminen verollisesta hinnasta</p>
+<p>Suhdelukuina voi käyttää <strong>Veroton hinta = 100, ALV = 24, verollinen hinta = 124</strong></p>
+<p><span class="math notranslate nohighlight">\(ALV = 24/124\cdot verollinen hinta\)</span></p>
+<p><span class="math notranslate nohighlight">\(Veroton hinta = 100/124\cdot verollinen hinta \)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Kuinka paljon lahjan saaja säästää veroissa, jos 60000 euron kertalahjoituksen sijasta lahjoitettaisiin 20000 euroa kolmena vuonna peräkkäin?</p>
+<p>Veroton hinta = <span class="math notranslate nohighlight">\( 100/124\cdot 125 = 100.81 euroa \)</span><br />
+ALV = <span class="math notranslate nohighlight">\( 24/124\cdot 125 = 24.19 euroa  \)</span></p>
+<p>Vastaus:  veroton hinta = 100.81 euroa, ALV = 24.19 euroa</p>
+</div>
+</section>
+<section id="lahja-ja-perintovero-on-progressiivinen">
+<h2>Lahja- ja perintövero on progressiivinen<a class="headerlink" href="#lahja-ja-perintovero-on-progressiivinen" title="Permalink to this headline">#</a></h2>
+<p>Alla on lahjaverotaulukko vuodelta 2022</p>
+<p><img alt="lvero" src="_images/lahja.png" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Mikko sai v. 2022 tädiltään  12000 euroa. Paljonko hän joutuu maksamaan lahjaveroa? </p>
+<p>Vero = <span class="math notranslate nohighlight">\( 100 + 0.19*(12000-5000) = 1430 \)</span></p>
+<p>Vastaus:  1430 euroa</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -417,10 +610,17 @@ Aritmeettinen ja geometrinen jono. Koronkorkolaskut. Pitkät lainat, tehtäviä<
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="prosenttilaskut.html" title="next page">
+    <a class='left-prev' id="prev-link" href="prosenttilaskut.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Prosenttilaskut</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="indeksit.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Prosenttilaskut</p>
+        <p class="prev-next-title">Indeksit ja rahan arvo</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
