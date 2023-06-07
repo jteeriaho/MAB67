@@ -79,6 +79,17 @@
 #   
 # 3) Kopioi kaikki kaavat alas vetämällä kaavasolun oikeasta alakulmasta
 
+# #### Tasaerälaina, johon sisältyy "suurempi viimeinen erä"
+
+# Esim. 5000 euron taserälaina, jonka korkojakso on 1 vuosi, laina-aika 5 vuotta ja korko 10%. Viimeisen maksun yhteydessä maksetaan ylimääräinen 2000 euron isompi erä.  Mikä on tasaerän suuruus?  
+# 
+# **Periaate:** Merkitään tasaerää p:llä. Tulevien maksujen nykyarvojen summan on oltava sama kuin lainattu summa.      
+# 
+# Ts. $5000 = \frac{p}{1.01} + \frac{p}{1.01^2} + ... + \frac{p}{1.01^5} + \frac{2000}{1.01^5}$, josta p voidaan ratkaista laskimen yhtälönratkaisimella.      
+# 
+# Tämä menettely voidaan yleistää kaavaksi, jota käyttäen tasaerä p voidaan ratkaista peruslaskimilla.
+# 
+
 # ```{admonition} **Tasaerälaina, jossa viimeiseen erään on lisätty lainan jäännösarvo**
 # :class: tip  
 # 
@@ -86,11 +97,8 @@
 # 
 # k = lainamäärä, i = korkojakson korkoprosentti, n = erien määrä, K = jäännösarvo    
 # 
-# Huom! Kaavaa vastaava Excel funktio on MAKSU (engl. Excelissä PMT)   
 #    
 # ```
-
-# ###  Tasaerälaina, johon sisältyy "suurempi viimeinen erä"
 
 # **Moni autoliike mainostaa vaihtoautoja seuraavasti:  Auton hinta on 6000 euroa, rahoitus 36 kk maksuajalla ja 0.5% kk-korolla antaa kuukausieräksi 131.69. Viimeinen maksuerä on 2000 euroa suurempi.**       
 # 
@@ -109,7 +117,7 @@
 # Sijoitusten jälkeen saadaan tasaeräksi 
 # $p=\frac{6000\hspace{1mm}0.05-2000\hspace{1mm}0.005\cdot 1.005^{-36}}{1-1.005^{-36}} = 131.69 $      
 # 
-# Excel-ratkaisu: $\color{blue}{\text{=MAKSU(0,5%;36;5000,-2000)}}$
+# Calc-ohjelmalla: $\color{blue}{\text{=PMT(0,5%;36;5000,-2000)}}$
 # 
 # ```
 
