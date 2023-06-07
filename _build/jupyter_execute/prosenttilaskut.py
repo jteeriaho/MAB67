@@ -114,7 +114,7 @@
 # Vastaus:  152300 euroa
 # ```
 
-# ```{admonition} Käytetyn Fiatin ostohinta oli 7500 euroa. Mikä on auton arvo 6 vuoden kuluttua, jos oletetaan, että arvo putoaa 12 prosenttia vuodessa? 
+# ```{admonition} Käytetyn auton ostohinta oli 7500 euroa. Mikä on auton arvo 6 vuoden kuluttua, jos oletetaan, että arvo putoaa 12 prosenttia vuodessa? 
 # :class: dropdown
 # Vuotuinen korkokerroin on nyt 0.88 (koska 100% - 12% = 88%). Arvo 6 vuoden kuluttua on siten    
 # 

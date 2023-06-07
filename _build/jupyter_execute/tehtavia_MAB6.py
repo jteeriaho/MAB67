@@ -3,7 +3,7 @@
 
 # # Tehtäviä osaan MAB6
 
-# >*Laske ensin kukin tehtävä itse, katso vasta sen jälkeen vastaus ja malliratkaisu*
+# >*Laske tehtävät itse, katso vasta lopuksi vastaus ja malliratkaisu*
 
 # ## Prosenttilaskut
 
